@@ -42,7 +42,7 @@ RSpec.configure do |c|
       end
 
       # Install module and dependencies
-      puppet_module_install(:source => proj_root, :module_name => proj_root.gsub(/^puppet-/,''))
+      puppet_module_install(:source => proj_root, :module_name => File.basename(proj_root).gsub(/^puppet-/,''))
 
 <% (@configs['modules'] || []).each do |mod| -%>
       on host, puppet('module', 'install', '<%= mod['name'] %>', '--version=<%= mod['version'] %>'), { :acceptable_exit_codes => [0,1] } <%= "if fact('osfamily') == '#{mod['osfamily']}'" if mod['osfamily']%>
