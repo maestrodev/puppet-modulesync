@@ -1,0 +1,35 @@
+---
+Gemfile:
+  required:
+  - gem: rake
+  - gem: rspec-puppet
+    version: '>= 1.0.0'
+  - gem: puppetlabs_spec_helper
+    version: '>= 0.8.0'
+  - gem: puppet-lint
+    version: '>= 1.1.0'
+  - gem: simplecov
+  - gem: puppet-blacksmith
+    version: '>= 3.0.0'
+  - gem: librarian-puppet
+    version: '>= 2.0.0'
+  - gem: beaker
+    version: '>= 1.14.0'
+  - gem: beaker-rspec
+    version: '>= 2.1.0'
+  - gem: minitest
+    version: '< 5.0.0' # conflicts with beaker
+spec/spec_helper.rb:
+  requires: []
+.travis.yml:
+  rvm:
+  - 2.0.0
+  puppet:
+  - 3.7.0
+  - 3.6.0
+  - 3.5.0
+  - 3.4.0
+  - 3.3.0
+  - 3.2.0
+spec/spec_helper_acceptance.rb:
+  modules: []

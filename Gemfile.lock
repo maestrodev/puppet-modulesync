@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    git (1.2.6)
+    modulesync (0.2.0)
+      git (~> 1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  modulesync

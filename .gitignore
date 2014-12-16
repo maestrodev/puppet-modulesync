@@ -1,0 +1,13 @@
+.vagrant
+*.swp
+*.swo
+.idea
+
+.bundle
+vendor/
+
+.rbenv*
+.rvmrc*
+.ruby-*
+
+modules/
