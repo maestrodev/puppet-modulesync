@@ -19,6 +19,8 @@ Gemfile:
     version: '>= 2.1.0'
   - gem: minitest
     version: '< 5.0.0' # conflicts with beaker
+Rakefile:
+  strict_variables: true
 spec/spec_helper.rb:
   requires: []
 .travis.yml:
