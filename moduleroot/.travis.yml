@@ -11,7 +11,7 @@ rvm:
 <% end -%>
 
 env:
-<% (@configs['puppet'] + (@configs['extra_puppet'] || [])).each do |c| -%>
+<% (@configs['puppet'] + (@configs['extra_puppet'] || []) - (@configs['exclude_puppet'] || [])).each do |c| -%>
   - PUPPET_VERSION="~> <%= c %>"
 <% end -%>
 
