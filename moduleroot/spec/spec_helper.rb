@@ -14,6 +14,17 @@ RSpec.configure do |c|
     Puppet::Util::Log.newdestination(:console)
   end
 
+  c.default_facts = {
+    :operatingsystem => 'CentOS',
+    :kernel => 'Linux',
+    :osfamily => 'RedHat',
+    :architecture => 'x86_64'
+  }
+
+  c.before do
+    # avoid "Only root can execute commands as other users"
+    Puppet.features.stubs(:root? => true)
+  end
 end
 
 shared_examples :compile, :compile => true do
