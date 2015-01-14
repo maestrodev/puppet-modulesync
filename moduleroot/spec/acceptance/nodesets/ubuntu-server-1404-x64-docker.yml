@@ -1,0 +1,17 @@
+# This file is managed centrally by modulesync
+#   https://github.com/maestrodev/puppet-modulesync
+
+HOSTS:
+  ubuntu-server-1404-x64:
+    roles:
+      - master
+    platform: ubuntu-14.04-amd64
+    image: ubuntu:trusty
+    # ip: localhost
+    hypervisor : docker
+    docker_image_commands:
+      #- yum -y install tar
+      #- useradd vagrant
+CONFIG:
+  log_level: debug
+  type: git
