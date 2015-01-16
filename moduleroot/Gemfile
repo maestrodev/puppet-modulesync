@@ -3,7 +3,7 @@
 
 source 'https://rubygems.org'
 
-gem 'puppet', ENV['PUPPET_VERSION'] || '>= 2.7', :require => false
+gem 'puppet', ENV['PUPPET_VERSION'] || '<%= @configs['puppet_version'] -%>', :require => false
 
 <% (@configs['required'] + (@configs['extra'] || [])).each do |gem| -%>
 gem '<%= gem['gem'] %>'<%= ", '#{gem['version']}'" if gem['version'] %>, :require => false
