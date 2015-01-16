@@ -13,12 +13,8 @@ Gemfile:
     version: '>= 3.0.0'
   - gem: librarian-puppet
     version: '>= 2.0.0'
-  - gem: beaker
-    version: '>= 1.14.0'
   - gem: beaker-rspec
-    version: '>= 2.1.0'
-  - gem: minitest
-    version: '< 5.0.0' # conflicts with beaker
+    version: '>= 3.0.0'
 Rakefile:
   strict_variables: true
 spec/spec_helper.rb:
