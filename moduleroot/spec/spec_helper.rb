@@ -22,7 +22,7 @@ RSpec.configure do |c|
     :kernel => 'Linux',
     :osfamily => 'RedHat',
     :architecture => 'x86_64'
-  }
+  }.merge(<%= @configs['default_facts'] || {} -%>)
 
   c.before do
     # avoid "Only root can execute commands as other users"
