@@ -45,7 +45,7 @@ RSpec.configure do |c|
       puppet_module_install(:source => proj_root, :module_name => File.basename(proj_root).gsub(/^puppet-/,''))
 
 <% (@configs['modules'] || []).each do |mod| -%>
-      on host, puppet('module', 'install', '<%= mod['name'] %>', '--version=<%= mod['version'] %>'), { :acceptable_exit_codes => [0,1] } <%= "if fact('osfamily') == '#{mod['osfamily']}'" if mod['osfamily']%>
+      on host, puppet('module', 'install', '<%= mod['name'] %>', '--version=<%= mod['version'] %>'), { :acceptable_exit_codes => [0,1] } <%= "if fact_on(host,'osfamily') == '#{mod['osfamily']}'" if mod['osfamily']%>
 <% end -%>
     end
   end
