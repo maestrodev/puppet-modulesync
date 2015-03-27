@@ -11,7 +11,7 @@ Gemfile:
     version: '>= 1.1.0'
   - gem: simplecov
   - gem: puppet-blacksmith
-    version: '>= 3.0.0'
+    version: '>= 3.3.0'
   - gem: librarian-puppet
     version: '>= 2.0.0'
   - gem: beaker-rspec
@@ -34,6 +34,5 @@ spec/spec_helper.rb:
     puppet: 3.6.0
   forge:
     username: maestrodev
-    password: "ZKrjzYeK631RHJW+hph81zHXPifW1qFpP5RGdb/Eg9Nu4Pn78LOMOsPod4afm3Y7UEXkYapHCc9biv2PWOLnvRuuN52foS1A9kBhnKbicCCj1z1waj44xYrX5g8eXMKB4ZgQDr52Ms0onjiuQkZ/ufbBXWIRLUVfpLjxcSdAG1M="
 spec/spec_helper_acceptance.rb:
   modules: []
