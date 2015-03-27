@@ -40,9 +40,9 @@ matrix:
 
 deploy:
   provider: puppetforge
-  user: <%= @configs['forge']['username'] %>
+  user: <%= @configs['forge_username'] %>
   password:
-    secure: "<%= @configs['forge']['password'] %>"
+    secure: "<%= @configs['forge_password'] %>"
   on:
     tags: true
     # all_branches is required to use tags

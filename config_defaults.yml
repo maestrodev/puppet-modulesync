@@ -32,7 +32,6 @@ spec/spec_helper.rb:
   - 3.2.0
   deploy:
     puppet: 3.6.0
-  forge:
-    username: maestrodev
+  forge_username: maestrodev
 spec/spec_helper_acceptance.rb:
   modules: []
